@@ -1,4 +1,4 @@
-""" Social Media Urls """
+""" WolfDiary Urls """
 # Django
 from django.urls import path, include
 
@@ -6,10 +6,10 @@ from django.urls import path, include
 from rest_framework.routers import SimpleRouter
 
 # Views
-from .views import SocialMediaViewSet
+from .views import ContactViewSet
 
 router = SimpleRouter()
-router.register(r'social-media', SocialMediaViewSet, basename='social media')
+router.register(r'contact', ContactViewSet, basename='contact')
 
 urlpatterns = [
     path('', include(router.urls))

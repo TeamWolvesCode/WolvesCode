@@ -3,12 +3,12 @@
 from django.urls import path, include
 
 # Django Rest Framework
-from rest_framework.routers import DefaultRouter
+from rest_framework.routers import SimpleRouter
 
 # Views
 from .views import ColorViewSet
 
-router = DefaultRouter()
+router = SimpleRouter()
 router.register(r'colors', ColorViewSet, basename='color')
 
 urlpatterns = [

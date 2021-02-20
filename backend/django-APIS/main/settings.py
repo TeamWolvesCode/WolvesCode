@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'colors',
     'social_media',
+    'technology',
+    'team',
+    'clients',
+    'wolfdiary',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -105,6 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'team.TeamMember'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -124,3 +131,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'wolvescodetesting@gmail.com'
+EMAIL_HOST_PASSWORD = 'prueba123'
+
+EMAIL_LIST = ['wolvescodetesting@gmail.com']
