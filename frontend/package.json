@@ -52,11 +52,6 @@
     "webpack-dev-server": "^3.11.2"
   },
   "browsersList": "> 0.25%, not dead",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
