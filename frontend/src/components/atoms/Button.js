@@ -3,13 +3,14 @@ import React from "react";
 //Styles
 import "./styles/Button.css";
 
-export default function Button() {
+export default function Button(props) {
+  const { styles, text } = props;
   return (
-    <div className="container m-0">
+    <div className="container-fluid m-0">
       <div className="row">
         <div className="col">
-          <button className="btn btn-primary col-12 border-0" type="button">
-            CONTACT US
+          <button className={styles} type="button">
+            {text}
           </button>
         </div>
       </div>
