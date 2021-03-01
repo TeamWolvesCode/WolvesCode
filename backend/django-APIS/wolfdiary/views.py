@@ -17,6 +17,6 @@ class WolfPageViewSet(viewsets.ViewSet):
 
     def retrieve(self, request, pk):
         queryset = WolfPage.objects.filter(pk=pk)
-        print(queryset)
         serializers = WolfPageSerializer(queryset, many=True)
         return Response(serializers.data)
+

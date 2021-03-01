@@ -15,3 +15,8 @@ class ColorViewSet(viewsets.ViewSet):
         queryset = Color.objects.all()
         serializers = ColorSerializer(queryset, many=True)
         return Response(serializers.data)
+
+    def retrieve(self, request, pk):
+        queryset = Color.objects.filter(pk=pk)
+        serializers = ColorSerializer(queryset, many = True)
+        return Response(serializers.data)
