@@ -1,4 +1,9 @@
 from django.contrib import admin
 from .models import SocialMedia
-# Register your models here.
-admin.site.register(SocialMedia)
+
+
+@admin.register(SocialMedia)
+class SocialMediaAdmin(admin.ModelAdmin):
+    list_display = ('name', 'url')
+    search_fields = ('name__startswith',)
+    icon_name = "camera"

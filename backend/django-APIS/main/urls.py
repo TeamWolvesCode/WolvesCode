@@ -42,5 +42,6 @@ urlpatterns = [
     # Django Admin
     path('admin/', admin.site.urls),
 
+
     path('api/v1/', include(router.urls)),
 ]

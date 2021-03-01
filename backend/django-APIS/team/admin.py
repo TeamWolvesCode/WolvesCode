@@ -3,7 +3,8 @@ from django.contrib.auth.admin import UserAdmin
 from .models import TeamMember, Position
 
 
-class CustomUserAdmin(UserAdmin):
+@admin.register(TeamMember)
+class TeamMemberAdmin(admin.ModelAdmin):
     fieldsets = (
         *UserAdmin.fieldsets,  # original form fieldsets, expanded
         (
@@ -19,6 +20,14 @@ class CustomUserAdmin(UserAdmin):
         ),
     )
 
+    list_display = ("username", "first_name", "last_name")
+    list_filter = ('technologies', 'position')
+    search_fields = ("first_name__startswith", "username__startswith")
+    icon_name = 'face'
 
-admin.site.register(TeamMember, CustomUserAdmin)
-admin.site.register(Position)
+
+@admin.register(Position)
+class PositionAdmin(admin.ModelAdmin):
+    list_display = ('name', )
+    icon_name = 'book'
+
