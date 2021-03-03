@@ -12,7 +12,7 @@ router = SimpleRouter()
 router.register(r'clients', ClientViewSet, basename='client')
 router.register(r'stats', StatsViewSet, basename='stats')
 router.register(r'projects', ProjectViewSet, basename='project')
-router.register(r'projectideas', ProjectIdeasViewSet, basename = 'projectideas')
+router.register(r'projectideas', ProjectIdeasViewSet, basename='projectideas')
 
 urlpatterns = [
     path('', include(router.urls))
