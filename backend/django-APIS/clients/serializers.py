@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Client, Project
+from .models import Client, Project, ProjectIdeas
 from technology.serialiezers import TechnologySerializers
 from django.db.models import Sum, Avg
 
@@ -9,15 +9,19 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ('id', 'name', 'description', 'score', 'work_hours', 'projectsTechnologies')
+        fields = ('id', 'name', 'description', 'score', 'work_hours', 'client_ideas', 'projectsTechnologies')
 
 
-class ClientSerializer(serializers.ModelSerializer):
+class ClientSerializer(serializers.HyperlinkedModelSerializer):
     projects = ProjectSerializer(many=True)
 
     class Meta:
         model = Client
-        fields = ('id', 'name', 'business', 'testimony', 'link', 'email', 'projects')
+        fields = ['url', 'id', 'slug','name', 'business', 'testimony', 'link', 'email', 'projects']
+        lookup_field = 'slug'
+        extra_kwargs = {
+            'url': {'lookup_field' : 'slug'}
+        }
 
 
 class StatsSerializers(serializers.ModelSerializer):
@@ -52,5 +56,11 @@ class StatsSerializers(serializers.ModelSerializer):
             if item not in count:
                 count.append(item)
         return len(count)
+
+class ProjectIdeasSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ProjectIdeas
+        fields = ( 'project', 'idea',)
 
 

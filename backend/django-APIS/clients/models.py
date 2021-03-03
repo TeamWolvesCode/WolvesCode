@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 from technology.models import Technology
 
 
@@ -8,6 +9,7 @@ class Client(models.Model):
     testimony = models.TextField(blank=True)
     link = models.URLField(blank=True)
     email = models.EmailField()
+    slug = models.SlugField(max_length = 60, unique = True, blank = True) 
 
     class Meta:
         verbose_name = "Client"
@@ -16,15 +18,21 @@ class Client(models.Model):
     def __str__(self):
         return self.name
 
+    def save(self, *args, **kwargs):
+
+        self.slug = slugify(self.email)
+        super(Client, self).save(*args, **kwargs)
+
 
 class Project(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
-    score = models.FloatField()
-    work_hours = models.FloatField()
+    score = models.FloatField(default = 0)
+    work_hours = models.FloatField(default = 0)
     projectsTechnologies = models.ManyToManyField(Technology, related_name='projectsTechnologies')
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='projects')
     is_development = models.BooleanField(default=True)
+    client_ideas = models.TextField(blank = True)
 
     class Meta:
         verbose_name = "Project"
@@ -32,3 +40,9 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+class ProjectIdeas(models.Model):
+    idea = models.CharField(max_length=250)
+    project = models.ForeignKey(Project, on_delete = models.CASCADE, related_name='projectIdea')
+
+
