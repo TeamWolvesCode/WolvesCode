@@ -1,0 +1,87 @@
+
+====================== API Colors ===================
+
+http://localhost:8000/api/v1/colors/
+
+si se realiza un simple metodo GET a esta direccion te da la lista de los colores
+en cambio si quieres que te de un color en especifico pides la id por el
+mismo metodo GET a la direccion agregando la id
+
+http://localhost:8000/api/v1/colors/1/
+para darte el color con el id 1
+
+
+
+====================== API Social Media ============================
+
+http://localhost:8000/api/v1/social-media/
+
+funciona de la misma manera que la API colors, usas un metodo get para pedir
+todas las redes sociales
+
+
+========================= API Technology ==================================
+
+http://localhost:8000/api/v1/technologies/
+funciona igual que la anteriores aunque esta api mas que usarla es una de 
+complemento para las otras
+
+
+========================== API Team Member =============================
+
+http://localhost:8000/api/v1/team-members/
+
+Funciona como las anteriores metodo get a esa direccion y te debe de dar una lista de los datos dentro de team member
+
+
+=========================== API Client ==============================
+
+http://localhost:8000/api/v1/clients/
+
+esta si usas un metodo get para obtener informacion a esa direccion te 
+devuelve todos los clientes
+
+http://localhost:8000/api/v1/clients/<email sin @ y .>/
+
+te devuelve un cliente en especifico
+
+=========================== API Stats =============================
+
+http://localhost:8000/api/v1/stats/
+
+usa el metodo get para obtener los stats calculados
+
+
+=========================== API Project =============================
+http://localhost:8000/api/v1/projects/
+metodo GET para obtener la lista de todos los projectos
+
+http://localhost:8000/api/v1/projects/<id>/
+metodo Get para obtener un projecto en especifico
+si a esta direccion le haces un metodo PATCH junto con 
+{'client_idea':'el texto'} se actualiza solo la idea del 
+cliente
+
+
+=======================  API Project Ideas =======================
+http://localhost:8000/api/v1/projectideas/
+metodo GET a esta direccion te da la lista de todas las ideas
+pero si 
+http://localhost:8000/api/v1/projectideas/<id del proyecto>
+te da solo las ideas nuestras para un proyecto es especifico
+
+
+
+===================== API Wolf Page =====================
+http://localhost:8000/api/v1/wolf-diary/
+metodo GET para obtener una lista de los post en el blog, pero solo con el titulo
+id e imagen
+
+http://localhost:8000/api/v1/wolf-diary/<id del post>/
+metodo GET te da completa la informacion del proyecto y el post para el blog
+
+
+====================== API Contact ===========================
+http://localhost:8000/api/v1/contact/
+metodo POST con los datos de el formulario de contacto
+
