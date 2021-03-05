@@ -6,6 +6,7 @@ from technology.models import Technology
 class Client(models.Model):
     name = models.CharField(max_length=30)
     business = models.CharField(max_length=30, blank=True)
+    staff_position = models.CharField(max_length=30, blank=True)
     testimony = models.TextField(blank=True)
     link = models.URLField(blank=True)
     email = models.EmailField()
