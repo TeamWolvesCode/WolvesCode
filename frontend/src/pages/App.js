@@ -5,12 +5,12 @@ import "./styles/App.css";
 import "./styles/reset.css";
 
 //pruebas
-import Button from "../components/atoms/Button";
+import TestimonyPage from "./TestimonyPage";
 
 export default function App() {
   return (
-    <div>
-      <Button styles="btn btn-primary col-12 contactUs" text="Contact us" />
+    <div className="main-page">
+      <TestimonyPage />
     </div>
   );
 }

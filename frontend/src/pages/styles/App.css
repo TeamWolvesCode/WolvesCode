@@ -1,1 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;700;900&display=swap");
+
+/* ----------------------Extras---------------------- */
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: none;
+}
+body::-webkit-scrollbar-track {
+  background-color: none;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #a7a7aa;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent,
+    transparent
+  );
+}
+
+/* ----------------------Important---------------------- */
+/* main style */
+div.main-page {
+  padding: 50px 20px 0 20px;
+  margin: 0;
+  width: 100%;
+}
+
+/* media querys */
+@media only screen and (min-width: 768px) {
+  div.main-page {
+    padding: 70px 50px;
+  }
+}

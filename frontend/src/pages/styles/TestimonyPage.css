@@ -1,0 +1,213 @@
+/* testimonies list styles */
+div.listOfTestimonies div.card {
+  margin-bottom: 20px;
+}
+
+div.listOfTestimonies:last-child {
+  margin-bottom: 50px;
+}
+
+/* Media querys */
+@media only screen and (min-width: 1024px) {
+  div.listOfTestimonies {
+    display: flex;
+    flex-direction: row;
+
+    overflow: scroll;
+  }
+
+  div.listOfTestimonies div.card {
+    margin-bottom: 30px;
+    margin-right: 20px;
+  }
+
+  /* ---------------------with hover-------------------------- */
+  div.listOfTestimonies {
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+
+    overflow-y: hidden;
+  }
+
+  div.listOfTestimonies:hover {
+    height: 520px;
+  }
+
+  div.listOfTestimonies:hover div.card {
+    opacity: 0.3;
+  }
+
+  div.listOfTestimonies:hover div.card:hover {
+    overflow-y: scroll;
+    -webkit-transform: scale(1.2, 1.6);
+    transform: scale(1.2, 1.6);
+    opacity: 1;
+  }
+
+  div.listOfTestimonies:hover div.card:hover > * {
+    -webkit-transform: scale(0.83, 0.625);
+    transform: scale(0.83, 0.625);
+  }
+
+  div.card {
+    transition: 450ms all;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+  }
+
+  div.card:hover ~ div.card {
+    -webkit-transform: translate3d(58px, 0, 0);
+    transform: translate3d(58px, 0, 0);
+  }
+
+  /* content */
+  div.listOfTestimonies:hover div.card:hover div.secret-info {
+    display: none;
+  }
+
+  div.listOfTestimonies:hover div.card:hover div.first-div,
+  div.listOfTestimonies:hover div.card:hover div.second-div {
+    display: block;
+  }
+
+  div.listOfTestimonies:hover div.card:hover div.card-body {
+    margin-top: -35px;
+    padding: 0px;
+  }
+
+  /* quotes */
+  div.card-body img.quotes {
+    width: 30px;
+    height: 30px;
+
+    margin: 0 0 10px -10px;
+  }
+
+  /* message */
+  div.card-body p.card-text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+
+    margin-bottom: 30px;
+    width: 200%;
+  }
+
+  /* stats*/
+  div.container-star {
+    margin-bottom: 32px;
+  }
+
+  /* client info*/
+  div.listOfTestimonies:hover
+    div.card:hover
+    div.card-body
+    div.container-clientInfo
+    h2,
+  div.listOfTestimonies:hover
+    div.card:hover
+    div.card-body
+    div.container-clientInfo
+    h3 {
+    width: 200%;
+  }
+
+  /* client image*/
+  div.listOfTestimonies:hover div.card:hover div.card-body div.container-img {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  div.listOfTestimonies div.card {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-right: 29px;
+  }
+
+  /* ---------------------with hover-------------------------- */
+  div.listOfTestimonies:hover {
+    height: 520px;
+  }
+
+  div.listOfTestimonies:hover div.card {
+    opacity: 0.3;
+  }
+
+  div.listOfTestimonies:hover div.card:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  div.listOfTestimonies:hover div.card:hover > * {
+    -webkit-transform: scale(0.83);
+    transform: scale(0.83);
+  }
+
+  div.card {
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+  }
+
+  div.card:hover ~ div.card {
+    -webkit-transform: translate3d(58px, 0, 0);
+    transform: translate3d(58px, 0, 0);
+  }
+
+  /* content */
+  div.listOfTestimonies:hover div.card:hover div.secret-info {
+    display: none;
+  }
+
+  div.listOfTestimonies:hover div.card:hover div.first-div,
+  div.listOfTestimonies:hover div.card:hover div.second-div {
+    display: block;
+  }
+
+  div.listOfTestimonies:hover div.card:hover div.card-body {
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  /* quotes */
+  div.card-body img.quotes {
+    width: 30px;
+    height: 30px;
+
+    margin: 0 0 10px -10px;
+  }
+
+  /* message */
+  div.card-body p.card-text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+
+    margin-bottom: 30px;
+    width: 200%;
+  }
+
+  /* stats*/
+  div.container-star {
+    margin-bottom: 32px;
+  }
+
+  /* client info*/
+  div.listOfTestimonies:hover
+    div.card:hover
+    div.card-body
+    div.container-clientInfo
+    h2,
+  div.listOfTestimonies:hover
+    div.card:hover
+    div.card-body
+    div.container-clientInfo
+    h3 {
+    width: 200%;
+  }
+}

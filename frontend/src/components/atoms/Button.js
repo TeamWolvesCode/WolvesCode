@@ -17,3 +17,5 @@ export default function Button(props) {
     </div>
   );
 }
+
+// <Button styles="btn btn-primary col-12 contactUs" text="Contact us" />
