@@ -2,6 +2,8 @@
 from django.urls import include, path
 from django.contrib import admin
 from rest_framework.routers import DefaultRouter
+from django.conf import settings
+from django.conf.urls.static import static
 
 # My routers
 from colors.urls import router as router_colors
@@ -44,4 +46,4 @@ urlpatterns = [
 
 
     path('api/v1/', include(router.urls)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

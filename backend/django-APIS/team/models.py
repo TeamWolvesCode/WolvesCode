@@ -15,7 +15,7 @@ class Position(models.Model):
 
 
 class TeamMember(AbstractUser):
-    picture = models.ImageField(blank=True, upload_to='media/teamMember/')
+    picture = models.ImageField(blank=True, upload_to='teamMember/')
     technologies = models.ManyToManyField(Technology, related_name='technologies')
     description = models.TextField()
     position = models.ManyToManyField(Position, related_name='position')

@@ -11,7 +11,7 @@ class Client(models.Model):
     link = models.URLField(blank=True)
     email = models.EmailField()
     slug = models.SlugField(max_length = 60, unique = True, blank = True) 
-    image = models.ImageField(upload_to='media/client/', blank=True)
+    image = models.ImageField(upload_to='client/', blank=True)
 
     class Meta:
         verbose_name = "Client"
@@ -35,7 +35,7 @@ class Project(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='projects')
     is_development = models.BooleanField(default=True)
     client_ideas = models.TextField(blank = True)
-    image = models.ImageField(upload_to='media/projects/', blank=True)
+    image = models.ImageField(upload_to='projects/', blank=True)
 
     class Meta:
         verbose_name = "Project"

@@ -5,7 +5,7 @@ from clients.models import Project
 class WolfPage(models.Model):
     title = models.CharField(max_length=30)
     content = models.TextField()
-    image = models.ImageField(upload_to="media/wolf-diary")
+    image = models.ImageField(upload_to="wolf-diary")
     project = models.OneToOneField(Project, on_delete=models.CASCADE)
 
     class Meta:
