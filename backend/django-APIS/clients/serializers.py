@@ -9,7 +9,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ('id', 'name', 'description', 'score', 'work_hours', 'client_ideas', 'projectsTechnologies')
+        fields = ('id', 'name', 'description', 'image', 'score', 'work_hours', 'client_ideas', 'projectsTechnologies')
 
 
 class ClientSerializer(serializers.HyperlinkedModelSerializer):
