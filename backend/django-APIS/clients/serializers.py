@@ -17,7 +17,7 @@ class ClientSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Client
-        fields = ['url', 'id', 'slug','name', 'business', 'testimony', 'link', 'email', 'projects']
+        fields = ['url', 'id', 'slug','name', 'business','staff_position', 'image','testimony', 'link', 'email', 'projects']
         lookup_field = 'slug'
         extra_kwargs = {
             'url': {'lookup_field' : 'slug'}
