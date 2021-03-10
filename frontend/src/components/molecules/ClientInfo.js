@@ -7,7 +7,7 @@ export default function ClientInfo(props) {
   const { img, client, charge } = props;
   const backgroundStyle = {
     backgroundImage: `url("${img}")`,
-    backgroundSize: "contain",
+    backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
   };

@@ -15,10 +15,13 @@
   "author": "Gerson Eduardo Ostos Carrero",
   "license": "MIT",
   "dependencies": {
+    "@popperjs/core": "^2.9.1",
     "bootstrap": "^5.0.0-beta2",
     "core-js": "^3.9.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-bootstrap": "^1.5.1",
+    "react-dom": "^17.0.1",
+    "react-tooltip": "^4.2.15"
   },
   "devDependencies": {
     "@babel/core": "^7.13.0",

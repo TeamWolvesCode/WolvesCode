@@ -5,26 +5,25 @@ import "./styles/Testimony.css";
 
 //assets
 import quotes from "../../assets/quotes.svg";
-import deleteMe from "../../assets/person.png";
 
 //atoms
 import Starts from "../atoms/Starts";
-import ClientInfo from "../atoms/ClientInfo";
+import ClientInfo from "./ClientInfo";
 
 export default function Testimony(props) {
   const {
     testimonyMessage,
     record,
-    clientImg = deleteMe,
+    clientImg,
     clientName,
-    clientCharge = "Frontend DEV",
+    clientCharge,
     businessName,
-    businessImg = deleteMe,
+    businessImg,
   } = props;
 
   const backgroundStyleLogo = {
     backgroundImage: `url("${businessImg}")`,
-    backgroundSize: "contain",
+    backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
   };
@@ -37,7 +36,7 @@ export default function Testimony(props) {
     });
     recordProm = Math.round(sum / record.length);
   } else {
-    recordProm = record;
+    recordProm = record[0].score;
   }
 
   return (
@@ -47,18 +46,12 @@ export default function Testimony(props) {
           <h1>{businessName}</h1>
           <div className="container-logoImg" style={backgroundStyleLogo} />
         </div>
-        <div className="first-div">
-          <img className="quotes" src={quotes} alt="" />
+        <div className="container-testimonyInfo">
+          <img className="quotes" src={quotes} alt="" aria-hidden="true" />
           <p className="card-text">{testimonyMessage}</p>
           <Starts record={recordProm} />
         </div>
-        <div className="second-div">
-          <ClientInfo
-            img={clientImg}
-            client={clientName}
-            charge={clientCharge}
-          />
-        </div>
+        <ClientInfo img={clientImg} client={clientName} charge={clientCharge} />
       </div>
     </div>
   );

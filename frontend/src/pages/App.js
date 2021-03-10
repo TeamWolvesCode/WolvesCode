@@ -5,12 +5,12 @@ import "./styles/App.css";
 import "./styles/reset.css";
 
 //pruebas
-import TestimonyPage from "./TestimonyPage";
+import TestimonyList from "../components/organisms/TestimonyList";
 
 export default function App() {
   return (
     <div className="main-page">
-      <TestimonyPage />
+      <TestimonyList />
     </div>
   );
 }

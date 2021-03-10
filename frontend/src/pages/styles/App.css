@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;700;900&display=swap");
 
+body {
+  font-family: "Roboto", sans-serif;
+}
 /* ----------------------Extras---------------------- */
 /* scrollbar */
 body::-webkit-scrollbar {
@@ -24,7 +27,7 @@ body::-webkit-scrollbar-thumb {
 /* ----------------------Important---------------------- */
 /* main style */
 div.main-page {
-  padding: 50px 20px 0 20px;
+  padding: 50px 20px;
   margin: 0;
   width: 100%;
 }
@@ -33,5 +36,17 @@ div.main-page {
 @media only screen and (min-width: 768px) {
   div.main-page {
     padding: 70px 50px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  div.main-page {
+    padding: 70px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  div.main-page {
+    padding: 70px 100px;
   }
 }
