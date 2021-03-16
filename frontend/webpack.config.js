@@ -53,9 +53,6 @@ module.exports = {
         use: [
           {
             loader: "url-loader",
-            options: {
-              encoding: "utf8",
-            },
           },
         ],
       },
