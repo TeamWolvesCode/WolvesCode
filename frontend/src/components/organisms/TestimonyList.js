@@ -8,7 +8,7 @@ import Testimony from "../molecules/Testimony";
 import "./styles/TestimonyList.css";
 
 //assets
-import user from "../../assets/user.png";
+import user from "../../assets/logo.svg";
 import arrowLeft from "../../assets/caret-left-fill.svg";
 import arrowRight from "../../assets/caret-right-fill.svg";
 

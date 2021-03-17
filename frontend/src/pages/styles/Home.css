@@ -1,3 +1,21 @@
+/* Background */
 body {
   background-color: #021859 !important;
+  background-image: url(../../assets/Escudo.svg);
+  background-repeat: no-repeat;
+  background-position: right 50% top 80px;
+  background-size: 150%;
+  background-blend-mode: color-burn;
+}
+
+div.row,
+div.col,
+div.col-0,
+div.col-12,
+h1.title,
+h2.subtitleHowl,
+h2.subtitleInfo,
+p.paragraphsWhatWeDo {
+  margin: 0;
+  padding: 0;
 }
