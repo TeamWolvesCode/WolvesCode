@@ -1,9 +1,10 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
 
 
 class Technology(models.Model):
     name = models.CharField(max_length=30)
-    icon = models.ImageField(upload_to='technologies/')
+    icon = models.FileField(upload_to='technologies/',validators=[FileExtensionValidator(['pdf', 'doc', 'svg'])])
 
     class Meta:
         verbose_name = "Technology"

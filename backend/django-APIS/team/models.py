@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from technology.models import Technology
+from django.core.validators import FileExtensionValidator
 
 
 class Position(models.Model):
@@ -15,7 +16,7 @@ class Position(models.Model):
 
 
 class TeamMember(AbstractUser):
-    picture = models.ImageField(blank=True, upload_to='teamMember/')
+    picture = models.FileField(blank=True, upload_to='teamMember/',validators=[FileExtensionValidator(['png', 'jpg', 'svg'])])
     technologies = models.ManyToManyField(Technology, related_name='technologies')
     description = models.TextField()
     position = models.ManyToManyField(Position, related_name='position')

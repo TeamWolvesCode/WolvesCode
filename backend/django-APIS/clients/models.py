@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from technology.models import Technology
+from django.core.validators import FileExtensionValidator
 
 
 class Client(models.Model):
@@ -11,7 +12,7 @@ class Client(models.Model):
     link = models.URLField(blank=True)
     email = models.EmailField()
     slug = models.SlugField(max_length = 60, unique = True, blank = True) 
-    image = models.ImageField(upload_to='client/', blank=True)
+    image = models.FileField(upload_to='client/', blank=True, validators=[FileExtensionValidator(['jpg', 'png', 'svg'])])
 
     class Meta:
         verbose_name = "Client"
@@ -35,7 +36,7 @@ class Project(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='projects')
     is_development = models.BooleanField(default=True)
     client_ideas = models.TextField(blank = True)
-    image = models.ImageField(upload_to='projects/', blank=True)
+    image = models.FileField(upload_to='projects/', blank=True, validators=[FileExtensionValidator(['png', 'jpg', 'svg'])])
 
     class Meta:
         verbose_name = "Project"
