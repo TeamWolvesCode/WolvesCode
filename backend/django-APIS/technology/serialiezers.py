@@ -10,4 +10,4 @@ class TechnologySerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Technology
-        fields = ('pk', 'name', 'icon'. 'url_image')
+        fields = ('pk', 'name', 'icon', 'url_image')
