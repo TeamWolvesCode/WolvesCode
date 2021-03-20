@@ -2,22 +2,30 @@ from rest_framework import serializers
 from .models import Client, Project, ProjectIdeas
 from technology.serialiezers import TechnologySerializers
 from django.db.models import Sum, Avg
-
+from main.settings import MEDIA_URL, MEDIA_SERVER
 
 class ProjectSerializer(serializers.ModelSerializer):
     projectsTechnologies = TechnologySerializers(many=True)
+    url_image = serializers.SerializerMethodField()
+
+    def get_url_image(self, obj):
+        return f'{MEDIA_SERVER}{MEDIA_URL}{obj.image}'
 
     class Meta:
         model = Project
-        fields = ('id', 'name', 'description', 'image', 'score', 'work_hours', 'client_ideas', 'projectsTechnologies')
+        fields = ('id', 'name', 'description', 'image', 'score', 'work_hours', 'client_ideas', 'projectsTechnologies', 'url_image')
 
 
 class ClientSerializer(serializers.HyperlinkedModelSerializer):
     projects = ProjectSerializer(many=True)
+    url_image = serializers.SerializerMethodField()
+
+    def get_url_image(self, obj):
+        return f'{MEDIA_SERVER}{MEDIA_URL}{obj.image}'
 
     class Meta:
         model = Client
-        fields = ['url', 'id', 'slug','name', 'business','staff_position', 'image','testimony', 'link', 'email', 'projects']
+        fields = ['url', 'id', 'slug','name', 'business','staff_position', 'image', 'url_image','testimony', 'link', 'email', 'projects']
         lookup_field = 'slug'
         extra_kwargs = {
             'url': {'lookup_field' : 'slug'}
