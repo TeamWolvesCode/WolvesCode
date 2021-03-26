@@ -61,7 +61,7 @@ export default class TestimonyList extends Component {
       return <div>Loading...</div>;
     }
     return (
-      <div className="row">
+      <div className="row rowTestimonyList">
         <div className="col listOfTestimonies" ref={this.scroll}>
           {clients.map((client) => (
             <Testimony

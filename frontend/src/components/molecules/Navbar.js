@@ -33,27 +33,27 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/" activeClassName="nav-link">
+              <NavLink to="/about-us" className="nav-link">
                 About Us
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/" activeClassName="nav-link">
+              <NavLink to="/stats" className="nav-link">
                 Stats
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/" activeClassName="nav-link">
+              <NavLink to="/testimonials" className="nav-link">
                 Testimonials
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/" activeClassName="nav-link">
+              <NavLink to="/recent-work" className="nav-link">
                 Recent work
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/" activeClassName="nav-link">
+              <NavLink to="/contact-us" className="nav-link">
                 Contact us
               </NavLink>
             </li>

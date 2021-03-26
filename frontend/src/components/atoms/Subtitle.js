@@ -4,12 +4,12 @@ import React from "react";
 import "./styles/Subtitle.css";
 
 export default function Subtitle(props) {
-  const { content, colorSubtitle } = props;
+  const { content, colorSubtitle, classSubtitle } = props;
   const colorH2 = {
     color: `${colorSubtitle}`,
   };
   return (
-    <h2 className="subtitle" style={colorH2}>
+    <h2 className={classSubtitle} style={colorH2}>
       {content}
     </h2>
   );

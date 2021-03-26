@@ -7,6 +7,10 @@ body {
 /* scrollbar */
 body::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
+  background-color: none;
+}
+body::-webkit-scrollbar-corner {
   background-color: none;
 }
 body::-webkit-scrollbar-track {
@@ -15,16 +19,13 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #a7a7aa;
-  background-image: -webkit-linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 0, 0, 0.4) 50%,
-    transparent,
-    transparent
-  );
 }
 
 /* ----------------------Important---------------------- */
+div.root {
+  height: 100vh;
+}
+
 /* main style */
 div.main-page {
   padding: 50px 20px;

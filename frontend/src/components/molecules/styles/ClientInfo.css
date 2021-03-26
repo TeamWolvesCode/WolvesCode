@@ -70,7 +70,7 @@ div.container-clientInfo div.container-img {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
   /* client image */
   div.container-img {
     width: 70px;

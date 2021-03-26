@@ -1,39 +1,39 @@
-div.row button {
+div.row.rowTestimonyList button {
   display: none;
 }
 
-div.row,
-div.row div.col {
+div.row.rowTestimonyList,
+div.row.rowTestimonyList div.col {
   margin: 0px;
   padding: 0px;
 }
 
-div.row div.col div.card {
+div.row.rowTestimonyList div.col div.card {
   margin: 0px 0px 20px 0px;
 }
 
-div.row div.col div.card:last-child {
+div.row.rowTestimonyList div.col div.card:last-child {
   margin: 0px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
   /* tooltip */
   .tooltipTestimony {
     width: auto !important;
   }
 
   /* button */
-  div.row {
+  div.row.rowTestimonyList {
     position: relative;
   }
 
-  div.row button {
+  div.row.rowTestimonyList button {
     display: flex;
-    position: fixed;
+    position: absolute;
     width: 70px;
     height: 70px;
+    bottom: 50px;
     border-radius: 50%;
-    margin-top: 370px;
     background-color: #021859;
     border: none;
 
@@ -45,33 +45,33 @@ div.row div.col div.card:last-child {
     transform-origin: center;
   }
 
-  div.row button img.arrowImg {
+  div.row.rowTestimonyList button img.arrowImg {
     width: 40px;
     height: 40px;
   }
 
-  div.row button:focus {
+  div.row.rowTestimonyList button:focus {
     background-color: #021859;
   }
 
-  div.row button:hover {
+  div.row.rowTestimonyList button:hover {
     background-color: #0b9ed9;
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
 
-  div.row button.left {
+  div.row.rowTestimonyList button.left {
     margin-left: -35px;
   }
 
-  div.row button.rigth {
-    right: 35px;
+  div.row.rowTestimonyList button.rigth {
+    right: -35px;
   }
 
   /* distribution */
 
-  div.row div.listOfTestimonies {
+  div.row.rowTestimonyList div.listOfTestimonies {
     display: flex;
     flex-direction: row;
 
@@ -81,19 +81,19 @@ div.row div.col div.card:last-child {
     overflow-y: hidden;
   }
 
-  div.row div.col div.card {
+  div.row.rowTestimonyList div.col div.card {
     margin: 0px 20px 0px 0px;
   }
 
   /* scrollbar */
-  div.row div.listOfTestimonies::-webkit-scrollbar {
+  div.row.rowTestimonyList div.listOfTestimonies::-webkit-scrollbar {
     height: 10px;
     background-color: none;
   }
-  div.row div.listOfTestimonies::-webkit-scrollbar-track {
+  div.row.rowTestimonyList div.listOfTestimonies::-webkit-scrollbar-track {
     background-color: none;
   }
-  div.row div.listOfTestimonies::-webkit-scrollbar-thumb {
+  div.row.rowTestimonyList div.listOfTestimonies::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #021859;
     background-image: -webkit-linear-gradient(
@@ -172,11 +172,5 @@ div.row div.col div.card:last-child {
     width: 100%;
     align-items: center;
     justify-content: flex-start;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  div.row button.rigth {
-    right: 65px;
   }
 }

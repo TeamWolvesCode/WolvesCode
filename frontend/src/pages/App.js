@@ -1,37 +1,29 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //Styles
 import "./styles/App.css";
 import "./styles/reset.css";
 
-//molecules
-import Navbar from "../components/molecules/Navbar";
+//organisms
+import Layout from "../components/organisms/Layout";
 
 //pages
 import Home from "./Home";
+import Testimonials from "./Testimonials";
 
 export default function App() {
   return (
-    <div className="main-page">
-      <Navbar />
-      <Switch>
-        <Route path="/about-us">
-          {/* <AboutUs /> */}
-        </Route>
-        <Route path="/stats">
-          {/* <Stats /> */}
-        </Route>
-        <Route path="/testimonials">
-          {/* <Testimonials /> */}
-        </Route>
-        <Route path="/recent-work">
-          {/* <RecentWork /> */}
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Switch>
+          <Route exact path="/about-us" />
+          <Route exact path="/stats" />
+          <Route exact path="/testimonials" component={Testimonials} />
+          <Route exact path="/recent-work" />
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Layout>
+    </BrowserRouter>
   );
 }

@@ -18,7 +18,7 @@ div.container-star img {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
   div.container-star img {
     width: 40px;
     height: 40px;
