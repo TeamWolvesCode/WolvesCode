@@ -46,7 +46,7 @@ h2.subtitleHowl {
 }
 
 h2.subtitleInfo {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -57,7 +57,7 @@ h2.subtitleInfo {
 
 p.paragraphsWhatWeDo {
   width: 220px;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;

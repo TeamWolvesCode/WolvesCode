@@ -10,6 +10,7 @@ import Layout from "../components/organisms/Layout";
 
 //pages
 import Home from "./Home";
+import Stats from "./Stats";
 import Testimonials from "./Testimonials";
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
       <Layout>
         <Switch>
           <Route exact path="/about-us" />
-          <Route exact path="/stats" />
+          <Route exact path="/stats" component={Stats} />
           <Route exact path="/testimonials" component={Testimonials} />
           <Route exact path="/recent-work" />
           <Route exact path="/" component={Home} />
