@@ -8,8 +8,8 @@ export default function TotalHoursJobs(props) {
 
   return (
     <>
-      <h1>{info}+</h1>
-      <h2>{text}</h2>
+      <h1 className="totalHourJob-h1">{info}+</h1>
+      <h2 className="totalHourJob-h2">{text}</h2>
     </>
   );
 }

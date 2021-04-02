@@ -46,7 +46,7 @@ export default class Stats extends Component {
       return <div>Loading...</div>;
     }
     return (
-      <div className="container col-12 statsPage">
+      <div className="container col-12 col-xxl-8 statsPage">
         <Subtitle
           content="Stats"
           colorSubtitle="white"
@@ -57,10 +57,10 @@ export default class Stats extends Component {
           with the use of the internet.
         </p>
         <div className="row">
-          <div className="container col-12 totalHours">
+          <div className="container col-12 col-md-6 col-lg-7 totalHours">
             <TotalHoursJobs text="Total hours" info={stats.total_hours} />
           </div>
-          <div className="container col-12 totalJobs">
+          <div className="container col-12 col-md-6 col-lg-5 totalJobs">
             <TotalHoursJobs text="Total jobs" info={stats.total_jobs} />
           </div>
         </div>

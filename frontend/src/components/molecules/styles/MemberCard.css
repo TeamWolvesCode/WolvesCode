@@ -1,0 +1,336 @@
+/* --------------------------buttons styles------------------------------ */
+/* button */
+button.btnMembers {
+  width: 100%;
+  min-height: 110px;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+
+  margin: 0 0 10px 0;
+}
+
+button.btnMembers:last-child {
+  margin: 0;
+}
+
+button.btnMembers:focus {
+  border: none;
+  box-shadow: none;
+}
+
+button.btnMembers:hover,
+button.btnMembers:active,
+button.btnMembers:focus {
+  border: 3px solid white;
+}
+
+/* content */
+button.btnMembers div.row h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+}
+
+button.btnMembers div.row h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: white !important;
+}
+
+button.btnMembers div.row div.imgMemberTeam {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* distribution */
+button.btnMembers div.row div.container,
+button.btnMembers div.row div.imgMemberTeam {
+  margin: 0px;
+  padding: 0px;
+}
+
+button.btnMembers div.row h1 {
+  margin: 0 0 5px 0;
+}
+
+button.btnMembers div.row h2 {
+  margin: 0;
+}
+
+/* --------------------------modal styles------------------------------ */
+/* container */
+div.divModal {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+div.divModal div.modal-content {
+  width: 100vw;
+  margin: 0;
+}
+
+/* content */
+div.divModal button.buttonModal {
+  width: 30px;
+  height: 30px;
+  background-color: #ef1d69;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+}
+
+div.divModal button.buttonModal p {
+  display: none;
+}
+
+div.divModal button.buttonModal:after {
+  content: "";
+  width: 3px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+div.divModal button.buttonModal:before {
+  content: "";
+  width: 3px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+div.divModal div.imgMemberModal {
+  width: 100%;
+  height: 200px;
+}
+
+div.divModal h1.h1Modal {
+  font-family: "Bebas Neue", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+div.divModal h2.h2Modal {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+}
+
+div.divModal p.pModal {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+div.divModal div.containerIconsModal img.iconsModal {
+  height: 37px;
+}
+
+/* distribution */
+div.divModal div.modal-content {
+  padding: 50px 20px;
+  margin: 0;
+  /* para los iconos de tecnologias, si sobrepasan el ancho, overflow: scroll*/
+}
+
+div.divModal div.containerIconsModal {
+  padding: 20px;
+  margin: 0 -20px;
+}
+
+div.divModal button.buttonModal {
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+div.divModal div.imgMemberModal {
+  margin-bottom: 15px;
+}
+
+div.divModal h1.h1Modal {
+  margin-bottom: 5px;
+}
+
+div.divModal h2.h2Modal {
+  margin-bottom: 0px;
+}
+
+div.divModal p.pModal {
+  margin: 25px 0 30px 0;
+}
+
+div.divModal div.containerIconsModal img.iconsModal {
+  margin: 0 20px 0 0;
+}
+
+div.divModal div.containerIconsModal img.iconsModal:last-child {
+  margin: 0;
+}
+
+/* -------------- media querys --------------------*/
+@media only screen and (min-width: 768px) {
+  /* --------------------------buttons styles------------------------------ */
+  /* button */
+  button.btnMembers {
+    min-height: 156px;
+    padding: 30px;
+    margin: 0 0 20px 0;
+  }
+
+  button.btnMembers:last-child {
+    margin: 0;
+  }
+
+  /* content */
+  button.btnMembers div.row h1 {
+    font-size: 27px;
+  }
+
+  button.btnMembers div.row h2 {
+    font-size: 30px;
+  }
+
+  button.btnMembers div.row div.imgMemberTeam {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* distribution */
+  button.btnMembers div.row h1 {
+    margin: 0 0 10px 0;
+  }
+
+  /* OJO empezar a modificar desde aca */
+  /* --------------------------modal styles------------------------------ */
+  /* container */
+  div.divModal {
+    width: 620px;
+    height: 550px;
+    margin: 3rem auto;
+  }
+
+  div.divModal div.modal-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  /* content */
+  div.divModal button.buttonModal {
+    width: 40px;
+    height: 40px;
+  }
+
+  div.divModal div.imgMemberModal {
+    width: 172px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  div.divModal p.pModal {
+    text-align: justify;
+  }
+
+  div.divModal div.containerIconsModal img.iconsModal {
+    height: 50px;
+  }
+
+  /* distribution */
+  div.divModal div.modal-content {
+    padding: 50px;
+    margin: 0;
+    /* para los iconos de tecnologias, si sobrepasan el ancho, overflow: scroll*/
+  }
+
+  div.divModal div.containerIconsModal {
+    padding: 20px 50px;
+    margin: 0 -50px;
+  }
+
+  div.divModal div.imgMemberModal {
+    margin: 0;
+  }
+
+  div.divModal h1.h1Modal {
+    margin-bottom: 5px;
+  }
+
+  div.divModal h2.h2Modal {
+    margin-bottom: 0px;
+  }
+
+  div.divModal p.pModal {
+    margin: 25px 0 30px 0;
+  }
+
+  div.divModal div.containerIconsModal img.iconsModal {
+    margin: 0 20px 0 0;
+  }
+
+  div.divModal div.containerIconsModal img.iconsModal:last-child {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* --------------------------buttons styles------------------------------ */
+  /* button */
+  button.btnMembers {
+    min-height: 250px;
+    padding: 40px 20px;
+    margin: 0 10px 0 0;
+  }
+
+  button.btnMembers:last-child {
+    margin: 0;
+  }
+
+  /* distribution */
+  button.btnMembers div.row h2:last-child {
+    margin: 0 0 15px 0;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  /* --------------------------buttons styles------------------------------ */
+  /* button */
+  button.btnMembers {
+    width: 520px;
+    min-height: 250px;
+    padding: 50px 30px 30px 30px;
+
+    margin: 0 0 30px 0;
+  }
+
+  button.btnMembers:last-child {
+    margin: 0;
+  }
+}
