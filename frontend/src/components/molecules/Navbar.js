@@ -1,5 +1,7 @@
-import React from "react";
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
 import "bootstrap/js/dist/collapse";
 
 //styles
@@ -9,6 +11,16 @@ import "./styles/Navbar.css";
 import logoNav from "../../assets/logo.svg";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const showModal = () => {
+    setIsOpen(true);
+  };
+
+  const hideModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar navbar-light">
       <div className="container-fluid">
@@ -53,13 +65,23 @@ export default function Navbar() {
               </NavLink>
             </li> */}
             <li className="nav-item">
-              <NavLink to="/contact-us" className="nav-link">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a className="nav-link" onClick={showModal}>
                 Contact us
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>
       </div>
+      <Modal show={isOpen} onHide={hideModal} dialogClassName="divModalContact">
+        <button
+          type="button"
+          onClick={hideModal}
+          className="buttonModal h-auto"
+        >
+          <p>close</p>
+        </button>
+      </Modal>
     </nav>
   );
 }

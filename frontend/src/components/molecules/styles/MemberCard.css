@@ -77,13 +77,14 @@ div.divModal {
 
 div.divModal div.modal-content {
   width: 100vw;
+  height: 100vh;
   margin: 0;
 }
 
 /* content */
 div.divModal button.buttonModal {
   width: 30px;
-  height: 30px;
+  height: 30px !important;
   background-color: #ef1d69;
   border: none;
   border-radius: 5px;
@@ -228,35 +229,67 @@ div.divModal div.containerIconsModal img.iconsModal:last-child {
     margin: 0 0 10px 0;
   }
 
-  /* OJO empezar a modificar desde aca */
   /* --------------------------modal styles------------------------------ */
   /* container */
+  div.fade {
+    padding: 0;
+    display: flex !important;
+    justify-content: center;
+  }
+
   div.divModal {
-    width: 620px;
-    height: 550px;
-    margin: 3rem auto;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
   }
 
   div.divModal div.modal-content {
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
+    min-width: 620px;
+    height: 400px;
+    margin: 0;
+    border-radius: 15px;
+    overflow: scroll;
+  }
+
+  div.divModal div.modal-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: none;
+  }
+  div.divModal div.modal-content::-webkit-scrollbar-corner {
+    background-color: none;
+  }
+  div.divModal div.modal-content::-webkit-scrollbar-track {
+    background-color: none;
+  }
+  div.divModal div.modal-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #a7a7aa;
   }
 
   /* content */
   div.divModal button.buttonModal {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    min-height: 30px !important;
   }
 
   div.divModal div.imgMemberModal {
-    width: 172px;
+    min-width: 120px;
+    max-width: 121px;
     height: 120px;
     border-radius: 50%;
   }
 
-  div.divModal p.pModal {
-    text-align: justify;
+  div.divModal h1.h1Modal {
+    font-size: 50px;
+  }
+
+  div.divModal h2.h2Modal {
+    font-size: 30px;
   }
 
   div.divModal div.containerIconsModal img.iconsModal {
@@ -275,24 +308,25 @@ div.divModal div.containerIconsModal img.iconsModal:last-child {
     margin: 0 -50px;
   }
 
+  div.divModal button.buttonModal {
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+
   div.divModal div.imgMemberModal {
-    margin: 0;
+    margin: 0 20px 0 0;
   }
 
   div.divModal h1.h1Modal {
-    margin-bottom: 5px;
-  }
-
-  div.divModal h2.h2Modal {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
 
   div.divModal p.pModal {
-    margin: 25px 0 30px 0;
+    margin: 30px 0 40px 0;
   }
 
   div.divModal div.containerIconsModal img.iconsModal {
-    margin: 0 20px 0 0;
+    margin: 0 25px 0 0;
   }
 
   div.divModal div.containerIconsModal img.iconsModal:last-child {
@@ -316,6 +350,35 @@ div.divModal div.containerIconsModal img.iconsModal:last-child {
   /* distribution */
   button.btnMembers div.row h2:last-child {
     margin: 0 0 15px 0;
+  }
+
+  /* --------------------------modal styles------------------------------ */
+  /* container */
+  div.divModal div.modal-content {
+    min-width: 860px;
+    height: 600px;
+  }
+
+  div.divModal div.modal-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: none;
+  }
+
+  /* content */
+  div.divModal div.imgMemberModal {
+    min-width: 150px;
+    max-width: 151px;
+    height: 150px;
+  }
+
+  div.divModal h1.h1Modal {
+    font-size: 90px;
+  }
+
+  /* distribution */
+  div.divModal div.imgMemberModal {
+    margin: 0 30px 0 0;
   }
 }
 

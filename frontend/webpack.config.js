@@ -73,6 +73,6 @@ module.exports = {
     new BundleAnalyzerPlugin(),
   ],
   performance: {
-    hints: "warning",
+    hints: false,
   },
 };
