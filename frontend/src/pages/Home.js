@@ -1,5 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable class-methods-use-this */
 import React, { Component } from "react";
+import Modal from "react-bootstrap/Modal";
 
 //components
 import Subtitle from "../components/atoms/Subtitle";
@@ -7,9 +10,11 @@ import Button from "../components/atoms/Button";
 import SocialMedia from "../components/atoms/SocialMedia";
 import Technologies from "../components/atoms/Technologies";
 import TeamMembers from "../components/molecules/TeamMembers";
+import ContactForm from "../components/organisms/ContactForm";
 
 //styles
 import "./styles/Home.css";
+import "../components/molecules/styles/NavbarModal.css";
 
 //assets
 import photo from "../assets/adminMember.svg";
@@ -20,11 +25,21 @@ export default class Home extends Component {
     this.state = {
       error: null,
       isLoaded: false,
+      isOpen: false,
       socialsMedia: [],
       technologies: [],
       team: [],
     };
   }
+
+  //Modal
+  showModal = () => {
+    this.setState({ isOpen: true });
+  };
+
+  hideModal = () => {
+    this.setState({ isOpen: false });
+  };
 
   onMountSocialMedia(loadStatus, resultStatus, errorStatus) {
     this.setState({
@@ -97,7 +112,15 @@ export default class Home extends Component {
   }
 
   render() {
-    const { error, isLoaded, socialsMedia, technologies, team } = this.state;
+    const {
+      error,
+      isLoaded,
+      socialsMedia,
+      technologies,
+      team,
+      isOpen,
+    } = this.state;
+
     if (error) {
       return <div>Error: {error.message}</div>;
     }
@@ -122,7 +145,9 @@ export default class Home extends Component {
             <h2 className="subtitleHowl">HOWL WITH US</h2>
             <div className="row secondRow">
               <div className="col-12 col-sm-12 col-xxl-4 buttonHome">
-                <Button text="CONTACT US" styles="contactUs" />
+                <a onClick={this.showModal}>
+                  <Button text="CONTACT US" styles="contactUs" typeButton="button" />
+                </a>
               </div>
               <div className="col-12 col-sm-12 col-md-6 col-xxl-4 whatWeDo">
                 <h2 className="subtitleInfo">WHAT WE DO?</h2>
@@ -151,6 +176,20 @@ export default class Home extends Component {
             ))}
           </div>
         </div>
+        <Modal
+          show={isOpen}
+          onHide={this.hideModal}
+          dialogClassName="divModalContact"
+        >
+          <button
+            type="button"
+            onClick={this.hideModal}
+            className="buttonModalContact h-auto"
+          >
+            <p>close</p>
+          </button>
+          <ContactForm />
+        </Modal>
       </div>
     );
   }
