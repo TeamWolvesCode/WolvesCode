@@ -40,9 +40,9 @@ export default class Testimonials extends Component {
   async componentDidMount() {
     try {
       const teamAboutUsResponse = await fetch(
-        "http://0.0.0.0:8000/api/v1/team-members/"
+        "http://www.wolvesweb.tech/api/v1/team-members/"
       );
-      const colorsResponse = await fetch("http://0.0.0.0:8000/api/v1/colors/");
+      const colorsResponse = await fetch("http://www.wolvesweb.tech/api/v1/colors/");
 
       const jsonTeamAboutUs = await teamAboutUsResponse.json();
       const jsonColors = await colorsResponse.json();

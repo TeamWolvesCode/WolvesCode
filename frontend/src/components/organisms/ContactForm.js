@@ -50,7 +50,7 @@ export default class ContactForm extends Component {
     this.setState({ validated: true });
     event.preventDefault();
     try {
-      await fetch("http://0.0.0.0:8000/api/v1/contact/", {
+      await fetch("http://www.wolvesweb.tech/api/v1/contact/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

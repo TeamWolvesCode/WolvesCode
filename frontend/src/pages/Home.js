@@ -78,13 +78,13 @@ export default class Home extends Component {
   async componentDidMount() {
     try {
       const socialMediaResponse = await fetch(
-        "http://192.168.1.109/api/v1/social-media/"
+        "http://www.wolvesweb.tech/api/v1/social-media/"
       );
       const technologiesResponse = await fetch(
-        "http://192.168.1.109/api/v1/technologies/"
+        "http://www.wolvesweb.tech/api/v1/technologies/"
       );
       const teamResponse = await fetch(
-        "http://192.168.1.109/api/v1/team-members/"
+        "http://www.wolvesweb.tech/api/v1/team-members/"
       );
 
       const jsonSocialMedia = await socialMediaResponse.json();
