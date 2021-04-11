@@ -2,10 +2,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
+<<<<<<< HEAD
+=======
+import ContactForm from "../organisms/ContactForm";
+>>>>>>> f534ec1a250793f84570e76977b390925f3081cd
 import "bootstrap/js/dist/collapse";
 
 //styles
 import "./styles/Navbar.css";
+import "./styles/NavbarModal.css";
 
 //assets
 import logoNav from "../../assets/logo.svg";
@@ -77,10 +82,18 @@ export default function Navbar() {
         <button
           type="button"
           onClick={hideModal}
+<<<<<<< HEAD
           className="buttonModal h-auto"
         >
           <p>close</p>
         </button>
+=======
+          className="buttonModalContact h-auto"
+        >
+          <p>close</p>
+        </button>
+        <ContactForm />
+>>>>>>> f534ec1a250793f84570e76977b390925f3081cd
       </Modal>
     </nav>
   );

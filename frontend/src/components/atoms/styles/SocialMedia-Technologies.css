@@ -8,7 +8,7 @@ div.container-technologies {
   align-items: center;
 }
 
-div.container-socialMedia img.socialImages,
+div.container-socialMedia a.imgLinks img.socialImages,
 div.container-technologies img.technologiesImages {
   width: 40px;
 }
@@ -22,9 +22,13 @@ div.container-technologies img.technologiesImages {
     flex-wrap: wrap;
   }
 
-  div.container-socialMedia img.socialImages,
+  div.container-socialMedia a.imgLinks img.socialImages,
   div.container-technologies img.technologiesImages {
     width: 30px;
+  }
+
+  div.container-socialMedia a.imgLinks,
+  div.container-technologies img.technologiesImages {
     margin: 0 28px 0 0;
   }
 
@@ -32,7 +36,7 @@ div.container-technologies img.technologiesImages {
     margin-bottom: 10px;
   }
 
-  div.container-socialMedia img.socialImages:last-child,
+  div.container-socialMedia a.imgLinks:last-child,
   div.container-technologies img.technologiesImages:last-child {
     margin-right: 0;
   }
